@@ -72,8 +72,8 @@ class _EditStudentScreenState extends State<EditStudentScreen> {
           backgroundColor: app_colors.green,
           title: Image.asset(
             "assets/images/2....2.png",
-            height: 100,
-            width: 90,
+            height: 200,
+            width: 180,
           ),
           toolbarHeight: 150,
         ),

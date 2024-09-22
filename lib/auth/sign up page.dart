@@ -23,7 +23,7 @@ class _SignupPageState extends State<SignupPage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: app_colors.green,
         body: SingleChildScrollView(
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -38,8 +38,8 @@ class _SignupPageState extends State<SignupPage> {
                     const SizedBox(height: 60.0),
                     Image.asset(
                       "assets/images/2....2.png",
-                      height: 100,
-                      width: 90,
+                      height:190,
+                      width: 180,
                     ),const SizedBox(height: 20.0),
                     const Text(
                       "__ Sign up __",
@@ -53,7 +53,7 @@ class _SignupPageState extends State<SignupPage> {
                     const SizedBox(height: 20),
                     Text(
                       "Create your account",
-                      style: TextStyle(fontSize: 15, color: app_colors.green),
+                      style: TextStyle(fontSize: 15, color: app_colors.grey),
                     )
                   ],
                 ),
@@ -64,9 +64,11 @@ class _SignupPageState extends State<SignupPage> {
                       child: Column(
                         children: [
                           TextFormField(
+                            style: TextStyle(color: app_colors.white, fontSize: 20),
                             controller: _usernameController,
                             decoration: InputDecoration(
                               hintText: "Username",
+                              hintStyle:TextStyle(color: app_colors.white) ,
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(18),
                                 borderSide: BorderSide.none,
@@ -87,8 +89,11 @@ class _SignupPageState extends State<SignupPage> {
                           ),
                           const SizedBox(height: 20),
                           TextFormField(
+                            style: TextStyle(color: app_colors.white, fontSize: 20),
                             controller: _emailController,
                             decoration: InputDecoration(
+                              hintStyle:TextStyle(color: app_colors.white) ,
+
                               hintText: "Email",
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(18),
@@ -113,9 +118,11 @@ class _SignupPageState extends State<SignupPage> {
                           ),
                           const SizedBox(height: 20),
                           TextFormField(
+                            style: TextStyle(color: app_colors.white, fontSize: 20),
                             controller: _passwordController,
                             decoration: InputDecoration(
                               hintText: "Password",
+                              hintStyle:TextStyle(color: app_colors.white) ,
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(18),
                                 borderSide: BorderSide.none,
@@ -153,9 +160,10 @@ class _SignupPageState extends State<SignupPage> {
                             },
                           ),
                           const SizedBox(height: 20),
-                          TextFormField(
+                          TextFormField(style: TextStyle(color: app_colors.white, fontSize: 20),
                             controller: _confirmPasswordController,
                             decoration: InputDecoration(
+                              hintStyle:TextStyle(color: app_colors.white) ,
                               hintText: "Confirm Password",
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(18),
@@ -262,14 +270,16 @@ class _SignupPageState extends State<SignupPage> {
                     style: ElevatedButton.styleFrom(
                       shape: const StadiumBorder(),
                       padding: const EdgeInsets.symmetric(vertical: 16),
-                      backgroundColor: app_colors.green, // Use your green color
+                      backgroundColor: app_colors.white, // Use your green color
                     ),
                   ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    const Text("Already have an account?"),
+                    const Text("Already have an account?",style: TextStyle(
+                      color: app_colors.grey
+                    ),),
                     TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/LoginPage');

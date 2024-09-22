@@ -24,19 +24,23 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     var dataprovider = Provider.of<DataProvider>(context);
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: app_colors.green,
       body: Container(
-        margin: const EdgeInsets.all(24),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              _header(context),
-              _inputField(context, dataprovider),
-              _forgotPassword(context),
-              _signup(context),
-            ],
+        margin: const EdgeInsets.only(right: 24,bottom: 24,left: 24,top: 50),
+        child: SingleChildScrollView(
+          child: Form(
+            key: _formKey,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                _header(context),
+                SizedBox(height: 10,),
+                _inputField(context, dataprovider),
+                _forgotPassword(context),
+                SizedBox(height: 110,),
+                _signup(context),
+              ],
+            ),
           ),
         ),
       ),
@@ -48,17 +52,15 @@ class _LoginPageState extends State<LoginPage> {
       children: [
         Image.asset(
           "assets/images/2....2.png",
-          height: 100,
-          width: 90,
+          height:170,
+          width: 180,
         ),
-        SizedBox(height: 20,),
         Text(
           "Welcome Back",
           style: TextStyle(
               fontSize: 40, fontWeight: FontWeight.bold, color: app_colors.orange),
         ),
-        Text("Enter your credentials to login",
-            style: TextStyle(color: app_colors.green)),
+
       ],
     );
   }
@@ -69,10 +71,11 @@ class _LoginPageState extends State<LoginPage> {
       children: [
         TextFormField(
           cursorColor: app_colors.orange, // Use your orange color
-          style: TextStyle(color: Colors.black, fontSize: 20),
+          style: TextStyle(color: app_colors.white, fontSize: 20),
           controller: _emailController,
           decoration: InputDecoration(
               hintText: "Email",
+              hintStyle:TextStyle(color: app_colors.white) ,
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(18),
                   borderSide: BorderSide.none),
@@ -86,13 +89,15 @@ class _LoginPageState extends State<LoginPage> {
             return null;
           },
         ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 15),
         TextFormField(
           cursorColor: app_colors.orange, // Use your orange color
-          style: TextStyle(color: Colors.black, fontSize: 20),
+          style: TextStyle(color: app_colors.white, fontSize: 20),
           controller: _passwordController,
           decoration: InputDecoration(
             hintText: "Password",
+            hintStyle:TextStyle(color: app_colors.white) ,
+
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(18),
               borderSide: BorderSide.none,
@@ -120,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
             return null;
           },
         ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 25),
         ElevatedButton(
           onPressed: () {
             FirebaseFunctions.login(
@@ -194,7 +199,7 @@ class _LoginPageState extends State<LoginPage> {
           style: ElevatedButton.styleFrom(
             shape: const StadiumBorder(),
             padding: const EdgeInsets.symmetric(vertical: 16),
-            backgroundColor: app_colors.green, // Use your green color
+            backgroundColor: app_colors.white, // Use your green color
           ),
           child: const Text(
             "Login",
@@ -222,7 +227,7 @@ class _LoginPageState extends State<LoginPage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text("Don't have an account? ",
-            style: TextStyle(color: Colors.blueGrey)),
+            style: TextStyle(color: app_colors.grey)),
         TextButton(
           onPressed: () {
             Navigator.pushReplacementNamed(context, '/SignupPage');

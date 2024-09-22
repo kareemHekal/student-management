@@ -24,7 +24,6 @@ class _StudentInAgroupState extends State<StudentInAgroup> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
         centerTitle: true,
         leading: IconButton(
           onPressed: () {
@@ -35,8 +34,8 @@ class _StudentInAgroupState extends State<StudentInAgroup> {
         backgroundColor: app_colors.green,
         title: Image.asset(
           "assets/images/2....2.png",
-          height: 100,
-          width: 90,
+          height: 200,
+          width: 180,
         ),
         toolbarHeight: 150,
       ),
@@ -51,7 +50,7 @@ class _StudentInAgroupState extends State<StudentInAgroup> {
             ),
             Positioned.fill(
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 8), // Adjust as needed
+                padding: const EdgeInsets.only(bottom: 8,top: 0), // Adjust as needed
                 child: Column(
                   children: [
                     Container(

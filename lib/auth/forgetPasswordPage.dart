@@ -69,7 +69,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: app_colors.green,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: app_colors.orange), // Use your orange color
           onPressed: () {
@@ -77,7 +77,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
           },
         ),
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: app_colors.green,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(25),
@@ -89,25 +89,29 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
-                    "assets/images/125.png",
+                    "assets/images/1253.png",
                     width: 300,
-                    height: 400,
+                    height: 300,
                   ),
                 ],
               ),
+              SizedBox(height: 20,),
               Text(
                 textAlign: TextAlign.center,
                 "Just enter your email and we will send you a reset password link.",
-                style: TextStyle(color: app_colors.green), // Use your blue color
+                style: TextStyle(color: app_colors.white), // Use your blue color
               ),
+              SizedBox(height: 20,),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 25),
                 child: TextFormField(
+
                   cursorColor: app_colors.orange, // Use your blue color
-                  style: TextStyle(color: Colors.black, fontSize: 20),
+                  style: TextStyle(color:app_colors.white, fontSize: 20),
                   controller: _emailController,
                   decoration: InputDecoration(
                     hintText: "Email",
+                    hintStyle:TextStyle(color: app_colors.white) ,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(18),
                       borderSide: BorderSide.none,
@@ -137,7 +141,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
                 style: ElevatedButton.styleFrom(
                   shape: const StadiumBorder(),
                   padding: const EdgeInsets.symmetric(vertical: 12),
-                  backgroundColor: app_colors.green, // Use your green color
+                  backgroundColor: app_colors.white, // Use your green color
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 30),
