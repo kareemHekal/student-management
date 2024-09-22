@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1056055159965",
+    "project_id": "student-mangment-66c3a",
+    "storage_bucket": "student-mangment-66c3a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056055159965:android:ec1aac77f6285c1850b874",
+        "android_client_info": {
+          "package_name": "com.example.study"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVb4yOP6odo9m1cRc04YeCllt7vv4Axzg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
